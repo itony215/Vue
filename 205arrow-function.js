@@ -1,16 +1,14 @@
-// ES6 箭頭函式：
-// this 一定會指向被宣告的地方的this
+/* ES6 箭頭函式：
 
-// this
-// 是function的context(情境)
+this
+ - 是function的context(情境)
+ - 一定會指向被宣告的地方的this
+ - this (function(){})
+ - 直接執行：window(global)
+ - 作為物件的成員函式執行，this就是該物件
+ - 作為dom的偵聽函式：該dom 
+ */
 
-// this (function(){})
-
-// - 直接執行：window(global)
-
-// - 作為物件的成員函式執行，this就是該物件
-
-// - 作為dom的偵聽函式：該dom
 var double = function(x) {
   return x * 2;
 };
