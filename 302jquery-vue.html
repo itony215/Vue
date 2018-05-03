@@ -1,0 +1,50 @@
+<!--
+   聲明式渲染(舉一反三): React, Vue, Angular 
+   命令式渲染(一個口令): jQuery
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  vue
+  <div id="counter">
+    <h1>{{count}}</h1>
+    <button v-on:click="add">+1</button>
+  </div>
+  <hr> jquery
+  <div id="counter2">
+    <h1 id="jq">0</h1>
+    <button id="jq">+1</button>
+  </div>
+
+  <script>
+    new Vue({
+      el: "#counter",
+      data: {
+        count: 0,
+      },
+      methods: {
+        add() {
+          this.count += 1;
+        }
+      }
+    });
+    //=================jQuery
+    $('button#jq').click(() => {
+      let count = parseInt($('h1#jq').text(), 10);
+      count += 1;
+      $('h1#jq').text(count);
+    });
+  </script>
+</body>
+
+</html>

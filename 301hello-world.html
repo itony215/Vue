@@ -1,0 +1,37 @@
+<!--
+MVVM
+Model & View Model & View
+vue實例的data & vue實例 ＆ DOM
+
+vue模板:把資料和dom做連結 v-if...
+vue實例:new vue 宣告的 vue model 後續介紹
+vue組件:把模板、實例、css 放在同一個檔案裏面，管理方便，要學組件匯出匯出、webpack打包
+
+cdnjs.com
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    {{message}}
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello Vue',
+      },
+    });
+  </script>
+</body>
+
+</html>
