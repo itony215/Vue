@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <span v-if="see">Now you see me</span>
+    <span v-else="see">Now you don't</span>
+    <div v-for="step in steps">{{step}}</div>
+  </div>
+  <script>
+    new Vue({
+      el: "#app",
+      data: {
+        see: false,
+        steps: [
+          '慕道友',
+          '基督徒',
+          '不再一樣',
+        ]
+      }
+    });
+  </script>
+</body>
+
+</html>
