@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h1>你考幾分</h1>
+    <input type="text" v-model='score'>
+    <div v-if='score>=60'>很棒，及格</div>
+    <div v-else='score<60'>不及格</div>
+  </div>
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        score: 0
+      }
+    })
+  </script>
+</body>
+
+</html>

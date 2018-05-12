@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <h1>顏色列表</h1>
+    <ul>
+      <li v-for='item in color'>{{item}}</li>
+    </ul>
+
+    <h1>各家庭父親</h1>
+    <ul>
+      <li v-for='item in homes' @click='myFa(item.father)'>{{item.father}}</li>
+    </ul>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        color: ['blue', 'red', 'black'],
+        homes: [
+          { father: 'tom' },
+          { father: 'bob' },
+          { father: 'john' }
+        ]
+      },
+      methods: {
+        myFa(father) {
+          alert('dad is ' + father)
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
